@@ -3,7 +3,7 @@ const utils = {
    * This function is anonymous, is executed immediately and
    * the return value is assigned to URLParams!
    * 
-   * @returns  
+   * @returns 
    */
   URLParams() {
     var queryString = {};
@@ -90,9 +90,9 @@ const utils = {
    * @param {any} element
    * @param {any} parentElement
    */
-  looseFocu(element, parentElement) {
+  looseFocus(element, parentElement) {
     let prevStyle = ''
-    this.removeClass(elem, 'focus')
+    this.removeClass(element, 'focus')
   },
 
   /**
