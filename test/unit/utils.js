@@ -1,12 +1,8 @@
 import utils from '../../src/utils';
 
 describe('utils', () => {
-  describe('Greet function', () => {
-    beforeEach(() => {
-      spy(utils, 'greet');
-      utils.greet();
-    });
-
+  describe('URLParams', () => {
+    
     it('should have been run once', () => {
       expect(utils.greet).to.have.been.calledOnce;
     });
