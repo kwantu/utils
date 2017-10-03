@@ -92,7 +92,7 @@ const utils = {
    */
   looseFocus(element, parentElement) {
     let prevStyle = ''
-    this.removeClass(elem, 'focus')
+    this.removeClass(element, 'focus')
   },
 
   /**
