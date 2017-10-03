@@ -49,7 +49,7 @@ const utils = {
   addClass(elem, className) {
     if (elem.classList)
       elem.classList.add(className)
-    else if (!hasClass(elem, className)) elem.className += " " + className
+    else if (!this.hasClass(elem, className)) elem.className += " " + className
   },
 
   /**
@@ -61,7 +61,7 @@ const utils = {
   removeClass(elem, className) {
     if (elem.classList)
       elem.classList.remove(className)
-    else if (hasClass(elem, className)) {
+    else if (this.hasClass(elem, className)) {
       var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
       elem.className = elem.className.replace(reg, ' ')
     }
@@ -78,10 +78,10 @@ const utils = {
     let draggableElems = document.querySelectorAll('.draggable')
     let canvas = document.getElementById('canvas')
     for (let i = 0, len = draggableElems.length; i < len; i++) {
-      looseFocus(draggableElems[i], parentElement)
-      looseFocus(canvas, parentElement)
+      this.looseFocus(draggableElems[i], parentElement)
+      this.looseFocus(canvas, parentElement)
     }
-    addClass(element, 'focus')
+    this.addClass(element, 'focus')
   },
 
   /**
@@ -92,7 +92,7 @@ const utils = {
    */
   looseFocu(element, parentElement) {
     let prevStyle = ''
-    removeClass(elem, 'focus')
+    this.removeClass(elem, 'focus')
   },
 
   /**
