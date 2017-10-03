@@ -117,7 +117,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    looseFocus: function looseFocus(element, parentElement) {
 	      var prevStyle = '';
-	      this.removeClass(elem, 'focus');
+	      this.removeClass(element, 'focus');
 	    },
 	    str2DOMElement: function str2DOMElement(HTML) {
 	      var frame = document.createElement('iframe');
