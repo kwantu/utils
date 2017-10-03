@@ -90,7 +90,7 @@ const utils = {
    * @param {any} element
    * @param {any} parentElement
    */
-  looseFocu(element, parentElement) {
+  looseFocus(element, parentElement) {
     let prevStyle = ''
     removeClass(elem, 'focus')
   },
