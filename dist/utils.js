@@ -64,7 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * This function is anonymous, is executed immediately and
 	   * the return value is assigned to URLParams!
 	   * 
-	   * @returns 
+	   * @returns  
 	   */
 	  URLParams: function URLParams() {
 	    var queryString = {};
@@ -107,7 +107,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param {any} className
 	   */
 	  addClass: function addClass(elem, className) {
-	    if (elem.classList) elem.classList.add(className);else if (!hasClass(elem, className)) elem.className += " " + className;
+	    if (elem.classList) elem.classList.add(className);else if (!this.hasClass(elem, className)) elem.className += " " + className;
 	  },
 	
 	
@@ -118,7 +118,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param {any} className
 	   */
 	  removeClass: function removeClass(elem, className) {
-	    if (elem.classList) elem.classList.remove(className);else if (hasClass(elem, className)) {
+	    if (elem.classList) elem.classList.remove(className);else if (this.hasClass(elem, className)) {
 	      var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
 	      elem.className = elem.className.replace(reg, ' ');
 	    }
@@ -136,10 +136,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var draggableElems = document.querySelectorAll('.draggable');
 	    var canvas = document.getElementById('canvas');
 	    for (var i = 0, len = draggableElems.length; i < len; i++) {
-	      looseFocus(draggableElems[i], parentElement);
-	      looseFocus(canvas, parentElement);
+	      this.looseFocus(draggableElems[i], parentElement);
+	      this.looseFocus(canvas, parentElement);
 	    }
-	    addClass(element, 'focus');
+	    this.addClass(element, 'focus');
 	  },
 	
 	
@@ -151,7 +151,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   */
 	  looseFocu: function looseFocu(element, parentElement) {
 	    var prevStyle = '';
-	    removeClass(elem, 'focus');
+	    this.removeClass(elem, 'focus');
 	  },
 	
 	
